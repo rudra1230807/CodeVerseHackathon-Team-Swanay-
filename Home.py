@@ -14,7 +14,18 @@ def local_css(file_name):
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 # --- LOAD THE CUSTOM CSS ---
-local_css("style.css")
+def local_css(file_name):
+    import streamlit as st
+    try:
+        with open(file_name) as f:
+            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+    except FileNotFoundError:
+        st.warning(f"⚠️ Could not load CSS file: {file_name}")
+
+# Correct relative path for Streamlit Cloud
+local_css("UI1/style.css")
+
+
 
 
 # --- HEADER ---
