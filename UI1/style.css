@@ -1,0 +1,42 @@
+/* style.css */
+
+/* --- GENERAL FONT AND BODY --- */
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;700&display=swap');
+
+body {
+    font-family: 'Google Sans', sans-serif;
+}
+
+/* --- MAIN BACKGROUND GRADIENT --- */
+[data-testid="stAppViewContainer"] > .main {
+    background-image: linear-gradient(180deg, #0E1117, #1a2f4b);
+}
+
+/* --- "FROSTED GLASS" CARD EFFECT for st.container(border=True) --- */
+[data-testid="stVerticalBlock"] > [data-testid="stVerticalBlock"] > [data-testid="stVerticalBlockBorderWrapper"] {
+    background-color: rgba(38, 39, 48, 0.6);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* --- CUSTOM BUTTON STYLE --- */
+[data-testid="stButton"] > button {
+    border-radius: 20px;
+    border: 1px solid #00aaff;
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+}
+[data-testid="stButton"] > button:hover {
+    border: 1px solid #ffffff;
+    background-color: #00aaff;
+    color: white;
+}
+
+/* --- SIDEBAR STYLE --- */
+[data-testid="stSidebar"] {
+    background: rgba(20, 20, 40, 0.8);
+    backdrop-filter: blur(5px);
+}

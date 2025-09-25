@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 5
+names: ['3', '6', 'algae', 'not algae', 'r']
+
+roboflow:
+  workspace: swanay
+  project: algae-h6w1u-lggyb
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/swanay/algae-h6w1u-lggyb/dataset/1

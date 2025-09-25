@@ -1,0 +1,10 @@
+# Paths to dataset folders
+train: /Users/rudra/SY/CodeVerse/p2/SmartHull_Inspector/datasets/train/images
+val:   /Users/rudra/SY/CodeVerse/p2/SmartHull_Inspector/datasets/val/images
+test:  /Users/rudra/SY/CodeVerse/p2/SmartHull_Inspector/datasets/test/images
+
+# Number of classes
+nc: 5
+
+# Class names (order must match class IDs in labels)
+names: ['mussels', 'barnacles', 'corrosion', 'algae', 'clean']
