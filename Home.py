@@ -32,7 +32,8 @@ local_css("UI1/style.css")
 with st.container():
     col1, col2 = st.columns([0.2, 0.8])
     with col1:
-        st.image("Swanay.png", width=150)
+        st.image("UI1/Swanay.png", width=150)
+
     with col2:
         st.title("Marine-Foul-Detect")
         st.write("""
