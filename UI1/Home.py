@@ -23,7 +23,7 @@ def local_css(file_name):
         st.warning(f"⚠️ Could not load CSS file: {file_name}")
 
 # Correct relative path for Streamlit Cloud
-local_css("UI1/style.css")
+local_css("style.css")
 
 
 
@@ -32,7 +32,7 @@ local_css("UI1/style.css")
 with st.container():
     col1, col2 = st.columns([0.2, 0.8])
     with col1:
-        st.image("UI1/Swanay.png", width=150)
+        st.image("Swanay.png", width=150)
 
     with col2:
         st.title("Marine-Foul-Detect")
