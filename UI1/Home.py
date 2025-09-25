@@ -1,32 +1,31 @@
-# Home.py
-
+import os
 import streamlit as st
 
 st.set_page_config(
-    page_title="Mssrine-Foul-Detect",
+    page_title="Marine-Foul-Detect",
     page_icon="⚓",
     layout="wide"
 )
 
 # --- FUNCTION TO LOAD CSS ---
 def local_css(file_name):
-    with open(file_name) as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+    try:
+        with open(file_name) as f:
+            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+    except FileNotFoundError:
+        st.warning(f"⚠️ Could not load CSS file: {file_name}")
+
+# --- Get path relative to Home.py ---
+current_dir = os.path.dirname(__file__)
 
 # --- LOAD THE CUSTOM CSS ---
-local_css("style.css")
-
-# Correct relative path for Streamlit Cloud
-local_css("style.css")
-
-
-
+local_css(os.path.join(current_dir, "style.css"))
 
 # --- HEADER ---
 with st.container():
     col1, col2 = st.columns([0.2, 0.8])
     with col1:
-        st.image("Swanay.png", width=150)
+        st.image(os.path.join(current_dir, "Swanay.png"), width=150)
 
     with col2:
         st.title("Marine-Foul-Detect")
@@ -37,7 +36,7 @@ with st.container():
 
 st.divider()
 
-# --- FEATURE CARDS (These will now have the frosted glass effect) ---
+# --- FEATURE CARDS ---
 st.header("✨ Key Features")
 col1, col2, col3 = st.columns(3, gap="large")
 
