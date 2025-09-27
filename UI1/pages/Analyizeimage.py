@@ -9,6 +9,7 @@ from datetime import datetime
 from streamlit_cropper import st_cropper
 import plotly.express as px
 from utils import load_yolo_model, preprocess_frame, create_pdf_report, create_detection_heatmap
+from ultralytics import YOLO
 
 st.set_page_config(page_title="Image Analysis", layout="wide")
 

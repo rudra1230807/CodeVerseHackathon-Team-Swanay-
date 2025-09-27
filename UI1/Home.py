@@ -1,5 +1,6 @@
 import os
 import streamlit as st
+from ultralytics import YOLO
 
 st.set_page_config(
     page_title="Marine-Foul-Detect",
