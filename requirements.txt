@@ -7,5 +7,5 @@ scikit-learn
 Pillow
 streamlit-cropper
 plotly
-ultralytics
+ultralytics>=8.0.0
 reportlab
