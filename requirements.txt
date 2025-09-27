@@ -8,4 +8,6 @@ Pillow
 streamlit-cropper
 plotly
 ultralytics>=8.0.0
+torch
+torchvision
 reportlab
