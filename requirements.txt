@@ -1,25 +1,11 @@
-```
-# Core Web App
 streamlit
-streamlit-cropper
-plotly
-
-# YOLOv8 / Deep Learning
-ultralytics
-torch
-torchvision
-torchaudio
-
-# Image Processing
 opencv-python-headless
-pillow
-matplotlib
-
-# Data Handling
 numpy
 pandas
+matplotlib
 scikit-learn
-
-# Report Generation
+Pillow
+streamlit-cropper
+plotly
+ultralytics
 reportlab
-```
